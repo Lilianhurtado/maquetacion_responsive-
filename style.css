@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, Helvetica, "sans-serif";
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+  border: 1px red solid;
+}
+.margen {
+  padding: 15px;
+}
+.centrar {
+  text-align: center;
+}
+.contenedor_info {
+  border: 5px purple solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /*hijos del mismo tamaño*/
+  flex-direction: row;
+}
+.contenedor_websites {
+  border: 2px blue solid;
+  width: 450px;
+}
+.contenedor_websites h1 {
+  font-size: 28px;
+}
+.contenedor_caracteristicas {
+  border: 2px green solid;
+  width: 550px;
+  display: flex;
+  flex-direction: row; /*ára que los hijos pasen de columnas a filas*/
+  justify-content: center;
+  gap: 50px; /*se tiene que usar gap y justify-content para que se hace el espacio de en medio de los articulos NO SPACE- BETWEEN*/
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.contenedor_caracteristicas article {
+  border: 2px orange solid;
+  padding: 10px;
+  width: 40%;
+}
+.contenedor_caracteristicas h2 {
+  padding: 20px, 0px; /*arriba y abajo e izquierday derecha*/
+}
+.contenedor_caracteristicas i {
+  font-size: 40px;
+  color: red;
+}
+.rojo {
+  color: red;
+}
+.btn_negro {
+  padding: 10px 30px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+}
+
+/*tablet*/
+@media (max-width: 850px) {
+  .contenedor_info {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  .contendor_websites {
+    width: 100%;
+  }
+}
+/*movil*/
+@media (max-width: 480px) {
+  .contenedor_caracteristicas {
+    width: 550px;
+    flex-direction: column; /*ára que los hijos pasen de columnas a filas*/
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .contenedor_caracteristicas article {
+    padding: 10px;
+    width: 100%;
+  }
+}
